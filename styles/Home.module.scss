@@ -13,10 +13,6 @@
   margin-bottom: rem(20);
 }
 
-.publishedAt {
-  margin-bottom: rem(40);
-}
-
 .post {
   & > h1 {
     font-size: rem(32);
@@ -42,6 +38,27 @@
   & > ol {
     list-style-type: decimal;
     list-style-position: inside;
+  }
+}
+.bloginfo{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: rem(40);
+  > p{
+    margin: 0;
+    padding: 0;
+    line-height: 1em;
+    &.category{
+      display: inline-block;
+      padding: rem(8) rem(16);
+      color: $c-main-on-text;
+      background-color: $c-main;
+      border-radius: rem(4);
+    }
+    &.publishedAt {
+      font-size: rem(14);
+    }
   }
 }
 

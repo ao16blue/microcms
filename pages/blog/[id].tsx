@@ -9,7 +9,10 @@ export default function BlogId({ blog }: { blog: any }) {
       <Header />
       <main className={`${styles.inner} ${styles.main}`}>
         <h1 className={styles.title}>{blog.title}</h1>
-        <p className={styles.publishedAt}>{blog.publishedAt}</p>
+        <div className={styles.bloginfo}>
+          <p className={styles.category}>{blog.category && `${blog.category.name}`}</p>
+          <p className={styles.publishedAt}>{blog.publishedAt}</p>
+        </div>
         <div
           dangerouslySetInnerHTML={{
             __html: `${blog.body}`,
