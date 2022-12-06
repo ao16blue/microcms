@@ -11,9 +11,6 @@ function Header() {
             <li>
               <Link href="/">トップ</Link>
             </li>
-            <li>
-              <Link href="/blog/">ブログ</Link>
-            </li>
           </ul>
         </menu>
       </div>
