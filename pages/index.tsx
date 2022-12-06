@@ -1,16 +1,23 @@
 import Link from "next/link";
 import { client } from "../libs/client";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import styles from "../styles/Home.module.scss";
 
 export default function Home({ blog }: {blog:any}) {
   return (
     <div>
-      <ul>
-        {blog.map((blog:any) => (
-          <li key={blog.id}>
-            <Link href={`/blog/${blog.id}`}>{blog.title}</Link>
-          </li>
-        ))}
-      </ul>
+      <Header />
+      <main className={`${styles.inner} ${styles.main}`}>
+        <ul>
+          {blog.map((blog: any) => (
+            <li key={blog.id}>
+              <Link href={`/blog/${blog.id}`}>{blog.title}</Link>
+            </li>
+          ))}
+        </ul>
+      </main>
+      <Footer />
     </div>
   );
 }

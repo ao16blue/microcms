@@ -1,0 +1,12 @@
+// px→rem
+$baseRem: 16;
+@function rem($pixels) {
+  @return calc($pixels / $baseRem) * 1rem;
+}
+@function rem_m($pixels) {
+  @return calc($pixels / $baseRem) * -1rem;
+}
+
+//color
+$c-main:#666 !default;
+$c-main-on-text: #fff !default;
